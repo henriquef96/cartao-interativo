@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+@font-face {
+    font-family: 'Halter';
+    src: url('font/HALTER__.ttf') format('truetype');
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light: hsl(270, 3%, 87%);
+    --Dark: hsl(279, 6%, 55%);
+    --Violet: hsl(278, 68%, 11%);
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    background-color: rgb(243, 243, 243);
+}
+
+.col-left {
+    background-image: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+.card {
+    flex-direction: column;
+    position: absolute;
+    left: 100%;
+    gap: 2rem;
+    transform: translate(-50%, -50%);
+    font-family: 'Halter';
+    height: 240px;
+    border: none;
+    background-color: transparent;
+    color: var(--White)
+}
+
+.front-card {
+    position: relative;
+    transform: translateX(-100px);
+}
+
+.bg-card-front {
+    background-image: url(./images/bg-card-front.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    width: 380px;
+    height: 230px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bg-card-back {
+    background-image: url(./images/bg-card-back.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    width: 380px;
+    height: 230px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.250);
+}
+
+.card-logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.number {
+    position: absolute;
+    font-size: 1.3rem;
+    left: 1rem;
+    bottom: 5rem;
+}
+
+.card-information {
+    position: absolute;
+    display: flex;
+    font-size: 0.9rem;
+    bottom: 2rem;
+    left: 1.5rem;
+    right: 1rem;
+}
+
+.card-back {
+    position: relative;
+}
+
+.cvv {
+    position: absolute;
+    right: 10%;
+    top: 44%;
+    font-size: 1rem;
+}
+
+form {
+    width: 40%;
+}
+
+.form-control {
+    background-color: transparent;
+}
+
+.btn {
+    background-color: var(--Violet);
+    color: var(--White);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: hsla(278, 68%, 11%, 0.850);
+    border: 1px solid var(--Violet);
+    color: var(--White);
+}
+
+.thank-hidden {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.thank-hidden h1 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.thank-hidden p {
+    font-size: 18px;
+    color: rgb(150, 150, 150);
+}
+
+@media screen and (max-width: 1199px) {
+
+    .col-left {
+        background-image: url(./images/bg-main-mobile.png);
+        background-size: cover;
+        height: 30vh;
+    }
+
+    .card {
+        flex-direction: column-reverse;
+        left: 60%;
+        top: 150%;
+    }
+
+    .front-card {
+        top: -150px;
+        z-index: 1;
+    }
+
+    .col-right {
+        height: 70vh;
+    }
+
+    form {
+        position: absolute;
+        width: 50%;
+        top: 50%;
+        margin: 0 auto
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .front-card {
+        position: relative;
+        left: 10%;
+        top: -70%
+    }
+
+    .bg-card-front {
+        width: 304px;
+        height: 184px;
+    }
+
+    .card-logo {
+        width: 60px;
+    }
+
+    .number {
+        font-size: 1rem;
+        bottom: 4rem;
+    }
+
+    .card-information {
+        position: absolute;
+        display: flex;
+        font-size: 0.7rem;
+        bottom: 2rem;
+        left: 1.5rem;
+        right: 1rem;
+    }
+
+    .card-back {
+        position: relative;
+        top: -15%;
+    }
+
+    .bg-card-back {
+        width: 304px;
+        height: 184px;
+    }
+
+    .cvv {
+        font-size: 0.9rem;
+    }
+
+    form {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .front-card {
+        position: relative;
+        left: 10%;
+        top: -70%
+    }
+
+    .bg-card-front {
+        width: 285px;
+        height: 172.5px;
+    }
+
+    .card-logo {
+        width: 50px;
+    }
+
+    .number {
+        font-size: 0.9rem;
+        bottom: 4rem;
+    }
+
+    .card-information {
+        font-size: 0.650rem;
+    }
+
+    .card-back {
+        position: relative;
+        top: -15%;
+    }
+
+    .bg-card-back {
+        width: 285px;
+        height: 172.5px;
+    }
+
+    .cvv {
+        font-size: 0.8rem;
+    }
+}
